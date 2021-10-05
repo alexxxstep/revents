@@ -7,18 +7,13 @@ import { sampleData } from '../../../app/api/sampleData'
 const EventDashboard = ({ formOpen, setFormOpen }) => {
   const [events, setEvents] = useState(sampleData)
 
-  // useEffect(() => {
-  //   setEvents()
-  //   return () => {}
-  // }, [events])
-
   return (
     <Grid>
       <Grid.Column width={10}>
         <EventList events={events} />
       </Grid.Column>
       <Grid.Column width={6}>
-        {formOpen && <EventForm setFormOpen={setFormOpen} />}
+        {formOpen && <EventForm setFormOpen={setFormOpen} setEvents={setEvents} />}
       </Grid.Column>
     </Grid>
   )
