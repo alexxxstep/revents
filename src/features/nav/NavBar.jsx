@@ -22,6 +22,7 @@ const NavBar = ({ setFormOpen }) => {
         </Menu.Item>
 
         <Menu.Item name='Events' as={NavLink} to='/events' />
+        <Menu.Item name='Sandbox' as={NavLink} to='/sandbox' />
 
         {authenticated && (
           <Menu.Item>
