@@ -1,3 +1,4 @@
+import { format } from 'date-fns/esm'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Header, Image, Item, Segment } from 'semantic-ui-react'
@@ -33,7 +34,7 @@ const EventDetailedHeader = ({ event }) => {
             <Item>
               <Item.Content>
                 <Header size='huge' content={event.title} style={{ color: 'white' }} />
-                <p>{event.date}</p>
+                <p>{format(event.date, 'MMMM d, yyyy h:mm a')}</p>
                 <p>
                   Hosted by <strong>{event.hostedBy}</strong>
                 </p>
